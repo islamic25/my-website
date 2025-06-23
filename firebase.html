@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Test</title>
+  <!-- Using compat version for simple testing -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <h2>Testing Firebase Connection</h2>
+  <p id="status">Connecting...</p>
+
+  <script>
+    // ✅ Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyAhCooN2P8Z6Ba_w_nvaK1_6jat4SNo920",
+      authDomain: "uf-smm-panal.firebaseapp.com",
+      projectId: "uf-smm-panal",
+      storageBucket: "uf-smm-panal.appspot.com", // ✅ fixed typo
+      messagingSenderId: "414537097780",
+      appId: "1:414537097780:web:b5d0dc819aad4c66b8e061"
+    };
+
+    try {
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      console.log("✅ Firebase Connected:", firebase.app().name);
+      document.getElementById("status").textContent = "✅ Firebase connected successfully!";
+    } catch (err) {
+      console.error("❌ Firebase NOT connected:", err);
+      document.getElementById("status").textContent = "❌ Firebase NOT connected!";
+    }
+  </script>
+</body>
+</html>
