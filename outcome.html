@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- SEO Meta Tags -->
+<title>outcome – Learn Web Development from Beginner to Pro</title>
+<meta name="description" content="LearnWebPro is your guide to mastering web development. Start from scratch and become a professional web developer.">
+<meta name="keywords" content="LearnWebPro, web development, HTML, CSS, JavaScript, responsive design, SEO, online courses">
+<meta name="author" content="LearnWebPro Team">
+<link rel="canonical" href="https://learnwebpro.site/">
+<meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Google Font Example */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f4f1ea;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #004225;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #d4af37;
+  padding: 10px;
+}
+
+nav a {
+  color: #004225;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #f4f1ea;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004225;
+  color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --accent-dark: #c0392b;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --text: #333;
+            --text-light: #7f8c8d;
+            --bg: #f9f9f9;
+            --card-bg: #fff;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        /* Hero */
+        .outcomes-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .outcomes-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .outcomes-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--light);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        /* Career Paths */
+        .career-paths {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .career-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .career-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .career-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .career-header h3 {
+            font-size: 1.5rem;
+        }
+
+        .career-body {
+            padding: 20px;
+        }
+
+        .career-body ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .career-body li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .career-body li:last-child {
+            border-bottom: none;
+        }
+
+        .career-body i {
+            color: var(--success);
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        .salary {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text);
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid var(--primary);
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-dot.active {
+            background-color: var(--primary);
+        }
+
+        /* Hiring Partners */
+        .hiring-partners {
+            padding: 60px 0;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .partner-logo {
+            max-width: 150px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* CTA */
+        .outcomes-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+
+        .outcomes-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .outcomes-cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .outcomes-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                <span>WebDev Academy</span>
+            </a>
+            <a href="form.html" class="btn">Enroll Now</a>
+        </div>
+    </header>
+
+    <!-- Hero --
+    <section class="outcomes-hero">
+        <div class="container">
+            <h1>Transform Your Career</h1>
+            <p>See what our graduates have achieved after completing our 6-month Web Development Course</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Employment Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$72k</div>
+                    <div class="stat-label">Average Starting Salary</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Graduates Hired</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Student Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Paths -->
+    <section class="career-paths">
+        <div class="container">
+            <h2 class="section-title">Career Paths for Graduates</h2>
+            <div class="career-grid">
+                <div class="career-card">
+                    <div class="career-header">
+                        <h3>Frontend Developer</h3>
+                    </div>
+                    <div class="career-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Build interactive user interfaces</li>
+                            <li><i class="fas fa-check"></i> Work with React, Vue, or Angular</li>
+                            <li><i class="fas fa-check"></i> Optimize performance and accessibility</li>
+                            <li><i class="fas fa-check"></i> Collaborate with designers</li>
+                        </ul>
+                        <div class="salary">Average Salary: $75,000 - $110,000</div>
+                    </div>
+                </div>
+                <div class="career-card">
+                    <div class="career-header">
+                        <h3>Backend Developer</h3>
+                    </div>
+                    <div class="career-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Develop server-side applications</li>
+                            <li><i class="fas fa-check"></i> Work with Node.js, Python, or Ruby</li>
+                            <li><i class="fas fa-check"></i> Design and optimize databases</li>
+                            <li><i class="fas fa-check"></i> Build and maintain APIs</li>
+                        </ul>
+                        <div class="salary">Average Salary: $80,000 - $120,000</div>
+                    </div>
+                </div>
+                <div class="career-card">
+                    <div class="career-header">
+                        <h3>Full-Stack Developer</h3>
+                    </div>
+                    <div class="career-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Handle both frontend and backend</li>
+                            <li><i class="fas fa-check"></i> Work across the entire tech stack</li>
+                            <li><i class="fas fa-check"></i> Architect complete solutions</li>
+                            <li><i class="fas fa-check"></i> Lead development teams</li>
+                        </ul>
+                        <div class="salary">Average Salary: $85,000 - $130,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Student Success Stories</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p class="testimonial-text">This course completely changed my career trajectory. Within 3 months of graduating, I landed a frontend developer position at a tech startup with a salary 40% higher than my previous job.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Frontend Developer at TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">The hands-on projects and career support made all the difference. I went from knowing nothing about coding to getting multiple job offers as a full-stack developer.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Full-Stack Developer at DigitalAgency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">The curriculum covered exactly what employers are looking for. I was able to build a portfolio that impressed hiring managers and secured me a remote position with a great company.</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Martinez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jessica Martinez</h4>
+                            <p>Backend Developer at CloudSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="outcomes-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Career?</h2>
+            <p>Join our next cohort and start your journey to becoming a professional web developer</p>
+            <a href="form.html" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="curriculm.html">Curriculum</a></li>
+                <li><a href="outcomes.html">Outcomes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© 2023 WebDev Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentTestimonial = index;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showTestimonial(index));
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Animate stats on scroll
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const statsSection = document.querySelector('.stats');
+        
+        function animateStats() {
+            const statsPos = statsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+            
+            if(statsPos < screenPos) {
+                statNumbers[0].textContent = '92%';
+                statNumbers[1].textContent = '$72k';
+                statNumbers[2].textContent = '500+';
+                statNumbers[3].textContent = '4.9/5';
+                window.removeEventListener('scroll', animateStats);
+            }
+        }
+        
+        window.addEventListener('scroll', animateStats);
+    </script>
+</body>
+</html>
